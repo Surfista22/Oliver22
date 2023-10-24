@@ -1,0 +1,451 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    // declarando variaveis.
+    int idade;
+    float peso;
+    char sexo;
+    char nome[300];
+
+    // solicitando dados para o usuario
+    printf("digite sua idade: ");
+    scanf("%d", &idade);
+
+    printf("digite seu peso: ");
+    scanf("%f", &peso);
+
+    fflush(stdin); // limpa o cache de imput
+
+    printf("digite seu sexo:");
+    scanf("%c", &sexo);
+
+    // exibindo dados do usuario
+    system("cls || clear"); //  limpar terminal
+
+    printf("idade: %d anos. \n ", idade);
+    printf("peso: %f kg \n ", peso);
+    printf("sexo: %c \n", sexo);
+
+    return 0;
+}
+--------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+
+    setlocale(LC_ALL, "portuguese");
+
+    int i;
+
+    for (i = 1; i <= 10; i++)
+    {
+        printf("3 x %d = %d \n", i, 3 * i);
+    }
+
+    printf("\n");
+
+    for (i = 1; i <= 10; i++)
+    {
+        printf("5 x %d = %d \n", i, 5 * i);
+    }
+
+    printf("\n");
+
+    for (i = 1; i <= 10; i++)
+    {
+
+        printf("7 x %d = %d \n", i, 7 * i);
+    }
+
+    return 0;
+}
+----------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+
+    setlocale(LC_ALL, "portuguese");
+
+    int i;
+    int num;
+
+    printf(" digite um numero: ");
+    scanf("%d", &num);
+
+for (i = 0; i <= 10; i++){
+
+    printf(" %d x %d = %d \n ", num, i, num * i);
+}
+
+printf("\n");
+
+
+
+
+
+return 0;
+
+}
+--------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main(){
+    setlocale(LC_ALL, "portuguese");
+    
+    int i;
+    int num;
+
+    for (i = 0; i <= 20; i++){
+
+        if (i % 2 == 0 ){
+
+            printf("%d \n", i);
+        }
+    } 
+        printf("\n");
+
+        return 0;
+}
+--------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "portuguese");
+
+    int i;
+    int num;
+
+    printf(" digite um numero: ");
+    scanf("%d", &i);
+
+  
+
+        if (i % 2 == 0 ){
+
+            printf("o numero %d e par \n", i);
+        } else
+        {
+            printf("o numero %d e impar", i);
+        }
+        
+
+        return 0;
+}
+-----------------------------------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "portuguese");
+    int primeiroNumero, segundoNumero, terceiroNumero;
+    int maior, menor;
+
+    printf("digite o primeiro numero:");
+    scanf("%d", &primeiroNumero);
+
+    printf("digite o segundo numero:");
+    scanf("%d", &segundoNumero);
+
+    printf(" digite o terceiro numero:");
+    scanf("%d", &terceiroNumero);
+
+    // operação ternaria
+    maior = primeiroNumero > segundoNumero ? primeiroNumero : segundoNumero;
+    maior = maior > terceiroNumero ? maior : terceiroNumero;
+
+    menor = primeiroNumero < segundoNumero ? primeiroNumero : segundoNumero;
+    menor = menor < terceiroNumero ? menor : terceiroNumero;
+
+    printf("\nmaior numero: %d \n", maior);
+    printf("menor numero: %d \n", menor);
+
+    return 0;
+}
+-------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "portuquese");
+
+    int numero;
+
+    printf("digite numero:");
+    scanf("%d", &numero);
+    fflush(stdin);
+
+    if (numero > 10)
+    {
+        printf(" maior que 10 ");
+    }
+    else
+    {
+        printf(" menor que 10 ");
+    }
+
+    return 0;
+}
+-------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+    int numero;
+        printf(" digite numero:");
+    scanf("%d", &numero);
+    fflush(stdin);
+
+    if (numero == 10)
+    {
+        printf(" numero e = 10");
+    }
+    else
+    {
+        if (numero > 10)
+        {
+            printf(" numero maior que 10 ");
+        }
+        else
+        {
+            printf("numero menor que 10");
+        }
+
+        return 0;
+    }
+}
+---------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int // inteiro 
+float // real
+char ( c ); // apenas um caracter 
+char ( s );  // cadeia de caracter 
+
+fflush(stdin);          // limpa o cache de imput
+system("cls || clear"); //  limpar terminal
+
+fgets( nome, 300, stdin);
+nome[strcspn(nome, "\n")] = 0;
+
+gets(nome);
+
+
+// if else if 
+
+//'
+-------------------------------------------------------------------------------
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+ char prato[600]
+
+ printf(" digite o numero referente ao pedido:");
+ scanf("c", &prato)
+ 
+ switch(prato);{
+
+ case 1:
+    printf("picanha");
+    printf("25,00");
+    break;
+
+ case 2:
+    printf("lasanha");
+    printf("20,00");
+    break;
+
+ case 3:
+    printf("strogonoff");
+    printf("18,00");
+    break;
+
+ case 4:
+    printf("bife acebolado");
+    printf("15,00")
+    break;
+
+ case 5:
+    printf("pao com ovo");
+    printf("5,00")
+    break;
+
+ case 6:
+    printf("sexta");
+    break;
+
+ case 7:
+    printf("sabado");
+    break;
+    
+ default:
+    printf(" opcao invalida ");
+   
+ }
+
+return 0;
+}
+--------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <locale.h>
+
+int main()
+{
+
+
+
+    setlocale(LC_ALL, "portuguese");
+
+    printf("Informa o Valor do produto: ");
+        scanf("%f", &preçodoproduto);
+fflush(stdin);
+            printf("Infome a forma de pagamento: \n");
+            printf(" 1 - Pagamento a vista \n"); 
+            printf(" 2 - Pagamento a prazo \n"); 
+            printf(" Informe a opção desejada: \n"); 
+                scanf("%f", &opcao);
+
+switch (opcao)
+    {
+    case 1:
+        desconto = precoproduto * 0.1;
+        precofinal = precoproduto - desconto;
+         printf("Preço do produto: R$ %.2f \n", precoproduto);
+         printf("Forma de pagamento: a vista");
+         printf(" Valor do desconto: R %.2f \n," desconto)
+         printf("Total a pagar: R$ %.2f \n", precofinal)
+         
+         break;
+    case 2:
+        printf("Digite a quantidade de parcelas: ");
+        scanf("%d", &parcelas);
+
+        printf("Preço do produto: R$ %.2f \n", precodoproduto);
+        printf("Forma de pagamento: a vista \n");
+        printf("Quantidade de parcelas: %d \n", parcelas);
+        printf("Valor por parcela: R$ %2.f")
+    
+    precoparcelado = precoproduto / parcelas;
+    precofinal = precoproduto;
+
+    default:
+    printf("Opção Inválida");
+        break;
+    }
+
+Printf("")
+    return 0
+}
+-----------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main() {
+
+
+float media;
+float nota1; 
+float nota2;
+
+printf(" digite nota 1: ");
+scanf("%f", &nota1);
+
+printf(" digite nota 2: ");
+scanf("%f", &nota2 );
+
+media = ( nota1 + nota2) / 2;
+
+if (media >= 7)
+{
+    printf(" Aluno aprovado \n");
+}
+else
+{
+    printf("Aluno reprovado \n");
+}
+
+ printf(" sua media e: %.2f \n ", media);
+
+fflush(stdin);          // limpa o cache de imput
+
+return 0;
+
+
+
+
+}
+-----------------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <locale.h>
+
+int main()
+{
+    char sexo;
+    float altura, peso;
+
+    setlocale(LC_ALL, "portuguese");
+    printf("Informe o seu Sexo: ");
+    scanf("%c", &sexo);
+    fflush(stdin);
+
+    printf("Informe a sua Altura: ");
+    scanf("%f", &altura);
+
+sexo = toupper (sexo); // <- Converte em Maiúsculo. 
+
+    switch (sexo)
+    {
+    case 'F':
+        peso = (62.1 * altura) - 44.7;
+        break;
+    case 'M':
+        peso = (72.7 * altura) - 58;
+        break;
+    default:
+        printf("opção inválida");
+    }
+    printf("O seu peso ideal: %.2f", peso);
+
+    return 0;
+}
+------------------------------------------------------------
+
