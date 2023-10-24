@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+
+int main()
+{
+
+    setlocale(LC_ALL, "portugueses");
+
+    float media;
+    float nota, nota2;
+
+
+    printf(" digite sua notas: ");
+        scanf("%f", &nota);
+
+    while (nota < 0 || nota > 10);
+        
+
+    {
+        printf(" nota: %.1f \n", nota);
+    }
+
+
+    printf("digite sua notas:");
+    scanf("%f", &nota2);
+
+    while (nota2 < 0 || nota2 > 10);
+        
+    {
+        printf("nota: %.1f \n", nota2);
+    }
+
+    media = (nota + nota2) / 2;
+
+    printf(" sua media: %.2f ", media);
+
+    return 0;
+}
+--------------------------------------------------------------------
+
+include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+
+int main()
+{
+
+    setlocale(LC_ALL, "portugueses");
+    float nota, soma, media = 0;
+    int i;
+    for (i = 1; i <= 2; i++)
+    {
+        do
+        {
+
+            printf("digite uma nota: \n");
+            scanf("%f", &nota);
+
+        } while (nota < 0 || nota > 10);
+        soma += nota;
+    }
+    media = soma / 2;
+    printf("Media do aluno: %.1f", media);
+
+    return 0;
+}
+----------------------------------------------------------------------------
